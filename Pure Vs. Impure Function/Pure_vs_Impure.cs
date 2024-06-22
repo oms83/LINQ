@@ -13,6 +13,14 @@ using System.Collections.Generic;
     Saf Olmayan Fonksiyon (Impure Function):
         Aynı girdi ile farklı çıktılar üretebilir.
         Dış dünya ile etkileşime girer veya fonksiyon dışındaki durumu değiştirebilir. 
+
+    Pure Function
+        -Robust And Testable Code
+        -Prefer Declarative over imparative coding
+    
+    Functional Programming
+        -Programming paradigm for developing software using functions
+        -Functional programming is the key part of functional programming
 */
 internal class Pure_vs_Impure
 {

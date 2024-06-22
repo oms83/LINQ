@@ -7,7 +7,7 @@ namespace LINQ
     {
         static void Main(string[] args)
         {
-            Pure_vs_Impure.run();
+            clsMain1.run();
 
             Console.ReadKey();
         }

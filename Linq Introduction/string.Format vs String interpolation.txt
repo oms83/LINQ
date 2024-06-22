@@ -1,0 +1,55 @@
+﻿C# dilinde ${} kullanımı, "string interpolation" olarak bilinir ve değerleri dizelere yerleştirmek 
+için daha okunabilir ve doğal bir yol sunar. Her iki yöntem de temel olarak aynı amacı 
+gerçekleştirir, ancak kullanımlarında ve tipik kullanım durumlarında bazı farklar vardır. 
+Aşağıda iki yöntem arasındaki başlıca farkları inceleyelim:
+
+1. Okunabilirlik ve Açıklık
+
+String interpolation:
+string result = $"Name: {firstname}, Last Name: {lastname}";
+
+string.Format:
+string result = string.Format("Name: {0}, Last Name: {1}", firstname, lastname);
+Okunabilirlik: String interpolation, değişkenleri doğrudan metin içinde görmenizi sağlar, 
+bu da kodun daha okunabilir ve anlaşılır olmasını sağlar.
+
+Açıklık: String interpolation kullanarak, dizeye eklenen değişkenleri ve verileri takip etmek daha kolaydır.
+
+2. Performans
+Performans: Performans açısından, string interpolation bazı durumlarda daha verimli olabilir 
+çünkü dahili olarak StringBuilder kullanır. Bu, bellekte oluşturulan geçici dize sayısını 
+azaltabilir, string.Format genellikle birden fazla geçici dize oluşturur.
+
+3. Derleme Zamanında Doğrulama
+Derleme Zamanında Doğrulama: String interpolation'da, derleyici (compiler) süslü parantezler {} içindeki 
+ifadeleri derleme zamanında (compile time) doğrulayabilir, bu da hataların erken tespit edilmesine 
+yardımcı olabilir. string.Format kullanıldığında, veri türü uyumsuzlukları veya argümanların 
+sırasındaki hatalar gibi hatalar yalnızca çalışma zamanında (runtime) ortaya çıkabilir.
+
+4. Çok Yönlülük
+Çok Yönlülük: string.Format kodun farklı yerlerinde aynı şablonu farklı değerlerle yeniden 
+kullanmanız gerektiğinde kullanışlı olabilir.
+
+
+Karşılaştırmalı Örnekler:
+
+String interpolation kullanımı:
+
+string firstname = "Alice";
+string lastname = "Johnson";
+string result = $"Name: {firstname}, Last Name: {lastname}";
+Console.WriteLine(result);  // Çıktı: Name: Alice, Last Name: Johnson
+
+string.Format kullanımı:
+
+string firstname = "Alice";
+string lastname = "Johnson";
+string result = string.Format("Name: {0}, Last Name: {1}", firstname, lastname);
+Console.WriteLine(result);  // Çıktı: Name: Alice, Last Name: Johnson
+
+
+Sonuç
+String interpolation, daha yeni bir yöntem olup daha okunabilir kod sağlar ve derleme zamanında doğrulama destekler. 
+string.Format ise karmaşık veya tekrar kullanılabilir dize şablonlarına ihtiyaç duyulan belirli 
+durumlarda faydalı olabilir. Çoğu durumda, string interpolation, okunabilirliği ve kullanım 
+kolaylığı nedeniyle en iyi seçenektir.
