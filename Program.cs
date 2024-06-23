@@ -7,7 +7,7 @@ namespace LINQ
     {
         static void Main(string[] args)
         {
-            clsMain1.run();
+            clsMain2.run();
 
             Console.ReadKey();
         }
