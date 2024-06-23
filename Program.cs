@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LINQ.Extension_Method;
+using System;
 
 
 namespace LINQ
@@ -7,7 +8,7 @@ namespace LINQ
     {
         static void Main(string[] args)
         {
-            clsMain2.run();
+            clsMain3.run();
 
             Console.ReadKey();
         }

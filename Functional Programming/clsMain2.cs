@@ -8,7 +8,7 @@ namespace LINQ
 {
     public class clsMain2
     {
-         public static void run()
+        public static void run()
         {
             RunExtensionProcedural();
 

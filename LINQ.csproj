@@ -44,11 +44,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsEmployee.cs" />
-    <Compile Include="clsExtensionProcedural2.cs" />
-    <Compile Include="clsMain1.cs" />
-    <Compile Include="clsMain2.cs" />
+    <Compile Include="Extension Method\clsExtensionProcedural3.cs" />
+    <Compile Include="Extension Method\clsMain3.cs" />
+    <Compile Include="Functional Programming\clsExtensionProcedural2.cs" />
+    <Compile Include="Procedural\clsMain1.cs" />
+    <Compile Include="Functional Programming\clsMain2.cs" />
     <Compile Include="clsRepository.cs" />
-    <Compile Include="clsExtensionProcedural.cs" />
+    <Compile Include="Procedural\clsExtensionProcedural.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Pure Vs. Impure Function\Pure_vs_Impure.cs" />
