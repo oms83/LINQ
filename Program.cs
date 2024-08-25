@@ -1,4 +1,5 @@
-﻿using LINQ.Extension_Method;
+﻿using LINQ.Deffered_vs_Immediate;
+using LINQ.Extension_Method;
 using System;
 
 
@@ -8,7 +9,7 @@ namespace LINQ
     {
         static void Main(string[] args)
         {
-            Deffered_vs_Immediate.Example.run();
+            EmpsExample1.run();
 
             Console.ReadKey();
         }
