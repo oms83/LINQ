@@ -10,7 +10,7 @@ namespace LINQ
            
         static void Main(string[] args)
         {
-            Select_Many.Example.run();
+            Zip_Operation.Example.run();
 
             Console.ReadKey();
         }
