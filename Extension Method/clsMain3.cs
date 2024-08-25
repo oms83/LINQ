@@ -22,6 +22,9 @@ namespace LINQ.Extension_Method
             var q1 = source.Filter(e => e.FirstName.ToLowerInvariant().StartsWith("a"));
             clsExtensionProcedural3.Print(q1, "Employees With First Name Starts With \'a\':");
 
+            var Q1 = source.Where(e => e.FirstName.ToLowerInvariant().StartsWith("a"));
+            clsExtensionProcedural3.Print(Q1, "Employees With First Name Starts With \'a\':");
+
             var q2 = source.Filter(e => e.FirstName.ToLowerInvariant().EndsWith("a"));
             clsExtensionProcedural3.Print(q2, "Employees With First Name Ends With \'a\':");
 

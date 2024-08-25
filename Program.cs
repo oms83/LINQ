@@ -8,7 +8,7 @@ namespace LINQ
     {
         static void Main(string[] args)
         {
-            clsMain3.run();
+            Deffered_vs_Immediate.Example.run();
 
             Console.ReadKey();
         }
