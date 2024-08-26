@@ -10,7 +10,7 @@ namespace LINQ
            
         static void Main(string[] args)
         {
-            Sorting.OderBy.run();
+            Sorting.ThenBySorting.Example.run();
 
             Console.ReadKey();
         }

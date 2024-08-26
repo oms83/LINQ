@@ -24,7 +24,7 @@ namespace LINQ.Sorting
                 new Employee
                 {
                     EmployeeNo = "2020-FI-1112",
-                    Name = "Ahmet YILMAZ",
+                    Name = "Omer MEMES",
                     Email = "ahmet.yilmaz@example.com",
                     Salary = 4200m,
                     Skills = new List<string>(){"Java", "Spring", "Hibernate"},

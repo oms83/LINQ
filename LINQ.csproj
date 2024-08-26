@@ -64,6 +64,7 @@
     <Compile Include="Sorting\Employee.cs" />
     <Compile Include="Sorting\OderBy.cs" />
     <Compile Include="Sorting\Repository.cs" />
+    <Compile Include="Sorting\ThenBySorting\Example.cs" />
     <Compile Include="Zip Operation\Example.cs" />
   </ItemGroup>
   <ItemGroup>
