@@ -10,7 +10,7 @@ namespace LINQ
            
         static void Main(string[] args)
         {
-            Sorting.Reverse_Operation.Example.run();
+            Data_Partitioning.Skip_Operation.Example1.run();
 
             Console.ReadKey();
         }
