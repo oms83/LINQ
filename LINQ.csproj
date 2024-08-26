@@ -61,11 +61,12 @@
     <Compile Include="Select Operation\EmployeeDto.cs" />
     <Compile Include="Select Operation\Repository.cs" />
     <Compile Include="Select Operation\SelectOperation.cs" />
-    <Compile Include="Sorting\CustomCoparer.cs" />
+    <Compile Include="Sorting\Custom_Comparer\CustomCoparer.cs" />
     <Compile Include="Sorting\Employee.cs" />
-    <Compile Include="Sorting\EmployeeComparer.cs" />
-    <Compile Include="Sorting\OderBy.cs" />
+    <Compile Include="Sorting\Custom_Comparer\EmployeeComparer.cs" />
+    <Compile Include="Sorting\Order By\OderBy.cs" />
     <Compile Include="Sorting\Repository.cs" />
+    <Compile Include="Sorting\Reverse Operation\Example.cs" />
     <Compile Include="Sorting\ThenBySorting\Example.cs" />
     <Compile Include="Zip Operation\Example.cs" />
   </ItemGroup>

@@ -10,7 +10,7 @@ namespace LINQ
            
         static void Main(string[] args)
         {
-            Sorting.CustomCoparer.run();
+            Sorting.Reverse_Operation.Example.run();
 
             Console.ReadKey();
         }
