@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LINQ.Data_Partitioning.Skip_Operation
 {
-    internal class Example1
+    internal class clsSkip
     {
         public static void run()
         {

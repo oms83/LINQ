@@ -46,7 +46,8 @@
     <Compile Include="clsEmployee.cs" />
     <Compile Include="Data Partitioning\Employee.cs" />
     <Compile Include="Data Partitioning\Repository.cs" />
-    <Compile Include="Data Partitioning\Skip Operation\Example1.cs" />
+    <Compile Include="Data Partitioning\Skip Operation\clsSkip.cs" />
+    <Compile Include="Data Partitioning\Take Operation\clsTake.cs" />
     <Compile Include="Deffered vs Immediate\Example.cs" />
     <Compile Include="Examples\EmpsExample1.cs" />
     <Compile Include="Extension Method\clsExtensionProcedural3.cs" />
