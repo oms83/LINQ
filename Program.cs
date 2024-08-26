@@ -10,7 +10,7 @@ namespace LINQ
            
         static void Main(string[] args)
         {
-            Zip_Operation.Example.run();
+            Sorting.OderBy.run();
 
             Console.ReadKey();
         }
