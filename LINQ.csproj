@@ -45,6 +45,8 @@
   <ItemGroup>
     <Compile Include="clsEmployee.cs" />
     <Compile Include="Data Partitioning\Employee.cs" />
+    <Compile Include="Data Partitioning\Pagination\Example.cs" />
+    <Compile Include="Data Partitioning\Pagination\Extensions.cs" />
     <Compile Include="Data Partitioning\Repository.cs" />
     <Compile Include="Data Partitioning\Skip Operation\clsSkip.cs" />
     <Compile Include="Data Partitioning\Take Operation\clsTake.cs" />

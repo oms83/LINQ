@@ -18,7 +18,7 @@ namespace LINQ.Data_Partitioning.Take_Operation
             var emps = Repository.GetEmployeeInfo();
 
             var items = emps.TakeWhile(emp => emp.Salary == 4000m);
-
+            
             items.Print("Take employees whose salary is less than 4000");
 
        
