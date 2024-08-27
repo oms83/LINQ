@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LINQ.Extension_Method;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -37,6 +38,20 @@ namespace LINQ.Quantifiers.All_Operation
             {
                 Console.WriteLine("no");
             }
+
+
+            var result3 = from emp in emps
+                          where emp.Skills.Any(s => s == "C#")
+                          select emp;
+
+
+            result3.Print("employees have C# skill");
+
+            var result4 = from emp in emps
+                          where emp.Skills.Count() > 3
+                          select emp;
+
+            result4.Print("Employees have more than 3 skills");
 
         }
     }
