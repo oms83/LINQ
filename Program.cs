@@ -10,7 +10,7 @@ namespace LINQ
            
         static void Main(string[] args)
         {
-            Data_Partitioning.Pagination.Example.run();
+            Quantifiers.Any_Operation.Example.run();
 
             Console.ReadKey();
         }
