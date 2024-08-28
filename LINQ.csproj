@@ -64,6 +64,7 @@
     <Compile Include="Pure Vs. Impure Function\Pure_vs_Impure.cs" />
     <Compile Include="Quantifiers\All Operation\Example.cs" />
     <Compile Include="Quantifiers\Any Operation\Example.cs" />
+    <Compile Include="Quantifiers\Contains Operation\Example.cs" />
     <Compile Include="Quantifiers\Employee.cs" />
     <Compile Include="Quantifiers\Repository.cs" />
     <Compile Include="Select Many\Example.cs" />

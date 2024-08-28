@@ -23,5 +23,24 @@ namespace LINQ.Quantifiers
                 $"{String.Format("{0:C0}", Salary)}   " +
                 $"[{String.Join(", ", Skills)}]";
         }
+        public override bool Equals(object obj)
+        {
+            if (obj == null)    return false;
+
+            Employee other = obj as Employee;
+
+            if (other == null) return false;
+
+            return other.Email.Equals(this.Email);
+        }
+
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                return 17 * 13 + this.Email.GetHashCode();
+            }
+        }
+
     }
 }
