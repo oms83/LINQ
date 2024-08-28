@@ -55,6 +55,9 @@
     <Compile Include="Extension Method\clsExtensionProcedural3.cs" />
     <Compile Include="Extension Method\clsMain3.cs" />
     <Compile Include="Functional Programming\clsExtensionProcedural2.cs" />
+    <Compile Include="Grouping\Employee.cs" />
+    <Compile Include="Grouping\Group By\Example.cs" />
+    <Compile Include="Grouping\Repository.cs" />
     <Compile Include="Procedural\clsMain1.cs" />
     <Compile Include="Functional Programming\clsMain2.cs" />
     <Compile Include="clsRepository.cs" />

@@ -10,7 +10,7 @@ namespace LINQ
            
         static void Main(string[] args)
         {
-            Quantifiers.Contains_Operation.Example.run();
+            Grouping.Group_By.Example.run();
 
             Console.ReadKey();
         }
