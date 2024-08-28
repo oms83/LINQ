@@ -10,7 +10,7 @@ namespace LINQ
            
         static void Main(string[] args)
         {
-            Grouping.Group_By.Example.run();
+            Join_Operation.Example.run();
 
             Console.ReadKey();
         }

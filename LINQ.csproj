@@ -58,6 +58,11 @@
     <Compile Include="Grouping\Employee.cs" />
     <Compile Include="Grouping\Group By and Look up\Example.cs" />
     <Compile Include="Grouping\Repository.cs" />
+    <Compile Include="Join Operation\Department.cs" />
+    <Compile Include="Join Operation\Employee.cs" />
+    <Compile Include="Join Operation\EmployeeDto.cs" />
+    <Compile Include="Join Operation\Example.cs" />
+    <Compile Include="Join Operation\Repository.cs" />
     <Compile Include="Procedural\clsMain1.cs" />
     <Compile Include="Functional Programming\clsMain2.cs" />
     <Compile Include="clsRepository.cs" />

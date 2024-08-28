@@ -57,7 +57,7 @@ namespace LINQ.Grouping.Group_By
             //var groups = emps.GroupBy(emp => emp.Department);
             IEnumerable<IGrouping<string, Employee>> groups = emps.GroupBy(emp => emp.Department);
 
-                
+
             foreach (var group in groups)
             {
                 Console.WriteLine($"\n\n{group.Key}\n");
