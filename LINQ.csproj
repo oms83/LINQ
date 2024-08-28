@@ -62,6 +62,7 @@
     <Compile Include="Join Operation\Employee.cs" />
     <Compile Include="Join Operation\EmployeeDto.cs" />
     <Compile Include="Join Operation\Example.cs" />
+    <Compile Include="Join Operation\Group.cs" />
     <Compile Include="Join Operation\Repository.cs" />
     <Compile Include="Procedural\clsMain1.cs" />
     <Compile Include="Functional Programming\clsMain2.cs" />

@@ -12,7 +12,34 @@ namespace LINQ.Join_Operation
         {
             //runJoin();
 
-            runJoinQuerySyntax();
+            //runJoinQuerySyntax();
+            runGroupJoin();
+        }
+
+        static void runGroupJoin()
+        {
+            var employees = Repository.GetEmployeesInfo();
+            var departments = Repository.GetDepartmentInfo();
+
+            var result = departments.GroupJoin(
+                employees,
+                dept => dept.Id,
+                emp => emp.DepartmentID,
+                (dept, emps) => new Group()
+                {
+                    Department = dept.Name,
+                    Employees = emps.Select(e => e.FirstName + " " + e.LastName).ToList(),
+                });
+
+            foreach (var department in result)
+            {
+                Console.WriteLine("\n" + department.Department + "\n");
+
+                foreach (var item in department.Employees)
+                {
+                    Console.WriteLine(item);
+                }
+            }
         }
         static void runJoinQuerySyntax()
         {
