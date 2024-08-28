@@ -10,7 +10,30 @@ namespace LINQ.Join_Operation
     {
         public static void run()
         {
-            runJoin();
+            //runJoin();
+
+            runJoinQuerySyntax();
+        }
+        static void runJoinQuerySyntax()
+        {
+            var employees = Repository.GetEmployeesInfo();
+            var departments = Repository.GetDepartmentInfo();
+
+            var result = from employee in employees
+                         join department in departments
+                         on employee.DepartmentID equals department.Id
+                         select new EmployeeDto()
+                         {
+                             FullName = employee.FirstName + " " + employee.LastName,
+                             Depatment = department.Name,
+                         };
+
+
+            foreach (var employee in result)
+            {
+                Console.WriteLine($"{employee.FullName,-15} {employee.Depatment}");
+            }
+
         }
         static void runJoin()
         {
