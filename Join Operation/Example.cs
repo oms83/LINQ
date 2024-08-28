@@ -13,9 +13,30 @@ namespace LINQ.Join_Operation
             //runJoin();
 
             //runJoinQuerySyntax();
-            runGroupJoin();
+            //runGroupJoin();
+            runGroupJoinQuery();
         }
+        static void runGroupJoinQuery()
+        {
+            var employees = Repository.GetEmployeesInfo();
+            var departments = Repository.GetDepartmentInfo();
 
+            var result = from department in departments
+                         join employee in employees
+                         on department.Id equals employee.DepartmentID
+                         into empGroup
+                         select empGroup;
+
+            foreach (var department in result)
+            {
+                Console.WriteLine("\n GROUP \n");
+
+                foreach (var item in department)
+                {
+                    Console.WriteLine(item);
+                }
+            }
+        }
         static void runGroupJoin()
         {
             var employees = Repository.GetEmployeesInfo();
