@@ -10,7 +10,7 @@ namespace LINQ
            
         static void Main(string[] args)
         {
-            Join_Operation.Example.run();
+            Generation_Operations.Example.run();
 
             Console.ReadKey();
         }

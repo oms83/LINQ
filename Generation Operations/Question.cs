@@ -14,7 +14,7 @@ namespace LINQ.Generation_Operations
 
         public int CorrectAnswer { get; set; }
 
-        public readonly static Question Instance = new Question()
+        public readonly static Question Default = new Question()
         {
             Title = "<<<<<<<<<<<<<<< Question Title Goes Here >>>>>>>>>>>>>>>",
             Choices = new List<Choice>()
