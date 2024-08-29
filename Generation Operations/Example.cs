@@ -10,9 +10,21 @@ namespace LINQ.Generation_Operations
     {
         public static void run()
         {
-            Example01();
+            //Example01();
+            Example02();
         }
 
+        static void Example02()
+        {
+            // range operation
+
+            var range = Enumerable.Range(0, 10);
+
+
+            var questions = QuestionBank.GetQuestionRange(range);
+
+            questions.ToQuiz();
+        }
         static void Example01()
         {
             //var questions = new List<Question>();    // empty list
