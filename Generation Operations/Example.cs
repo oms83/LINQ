@@ -11,9 +11,20 @@ namespace LINQ.Generation_Operations
         public static void run()
         {
             //Example01();
-            Example02();
+            //Example02();
+            Example03();
         }
+        static void Example03()
+        {
+            // repeat operation
 
+            var question = QuestionBank.PickOne();
+            Console.WriteLine(question);
+
+            var questions = Enumerable.Repeat(question, 10);
+            questions.ToQuiz();
+
+        }
         static void Example02()
         {
             // range operation
