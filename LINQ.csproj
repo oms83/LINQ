@@ -55,6 +55,9 @@
     <Compile Include="Extension Method\clsExtensionProcedural3.cs" />
     <Compile Include="Extension Method\clsMain3.cs" />
     <Compile Include="Functional Programming\clsExtensionProcedural2.cs" />
+    <Compile Include="Generation Operations\Choice.cs" />
+    <Compile Include="Generation Operations\Question.cs" />
+    <Compile Include="Generation Operations\QuestionBank.cs" />
     <Compile Include="Grouping\Employee.cs" />
     <Compile Include="Grouping\Group By and Look up\Example.cs" />
     <Compile Include="Grouping\Repository.cs" />
