@@ -10,7 +10,7 @@ namespace LINQ
            
         static void Main(string[] args)
         {
-            Generation_Operations.Element_Operation.clsFirst.run();
+            Equality_Operations.Example.run();
 
             Console.ReadKey();
         }
