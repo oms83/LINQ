@@ -57,6 +57,7 @@
     <Compile Include="Functional Programming\clsExtensionProcedural2.cs" />
     <Compile Include="Generation Operations\Choice.cs" />
     <Compile Include="Generation Operations\Element Operation\clsElementAt.cs" />
+    <Compile Include="Generation Operations\Element Operation\clsFirst.cs" />
     <Compile Include="Generation Operations\Example.cs" />
     <Compile Include="Generation Operations\Question.cs" />
     <Compile Include="Generation Operations\QuestionBank.cs" />

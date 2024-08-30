@@ -10,7 +10,7 @@ namespace LINQ
            
         static void Main(string[] args)
         {
-            Generation_Operations.Element_Operation.clsElementAt.run();
+            Generation_Operations.Element_Operation.clsFirst.run();
 
             Console.ReadKey();
         }
