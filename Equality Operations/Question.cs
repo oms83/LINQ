@@ -26,5 +26,32 @@ namespace LINQ.Equality_Operations
             return $"{Title}" +
                    $"{choices}";
         }
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null) return false;
+            if (ReferenceEquals(this, obj)) return true;
+            if (obj.GetType() != typeof(Question)) return false;
+
+            Question other = obj as Question;
+
+            return other.CorrectAnswer == CorrectAnswer
+                && other.Title.Equals(this.Title)
+                && Choices.SequenceEqual(other.Choices);
+        }
+
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                int hash = 17;
+
+                hash = hash * 23 + Title.GetHashCode();
+                hash = hash * 23 + Choices.GetHashCode();
+                hash = hash * 23 + CorrectAnswer.GetHashCode();
+
+                return hash;
+            }
+        }
     }
 }

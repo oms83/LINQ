@@ -21,7 +21,7 @@ namespace LINQ.Equality_Operations
             var quiz1 = QuestionBank.GetQuestionRange(Enumerable.Range(0, 4));
             var quiz2 = QuestionBank.GetQuestionRange(Enumerable.Range(0, 4)); 
 
-            var equal = quiz1.SequenceEqual(quiz2); // false
+            var equal = quiz1.SequenceEqual(quiz2); // true
 
             Console.WriteLine(equal);
 
