@@ -10,7 +10,7 @@ namespace LINQ
            
         static void Main(string[] args)
         {
-            Equality_Operations.Example.run();
+            Concatenation.Example.run();
 
             Console.ReadKey();
         }
