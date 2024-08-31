@@ -14,7 +14,20 @@ namespace LINQ.Aggregate_Operations
             //Example02();
             //Example03();
             //Example04();
-            Example05();
+            //Example05();
+            Example06();
+        }
+
+        private static void Example06()
+        {
+            var questions = Concatenation.QuestionBank.All;
+            
+            var x = questions.SelectMany(q => q.Choices)
+                             .Where(c => c.Order == 1)
+                             .Max(c => c.Descirption.Length);
+
+            
+            Console.WriteLine(x);
         }
 
         private static void Example05()
@@ -30,7 +43,7 @@ namespace LINQ.Aggregate_Operations
         private static void Example04()
         {
             var questions = Concatenation.QuestionBank.All;
-            
+
             var longestQuestionTitle = questions[0];
 
             var title = questions
