@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Aggregate Operations\Example.cs" />
     <Compile Include="clsEmployee.cs" />
     <Compile Include="Concatenation\Choice.cs" />
     <Compile Include="Concatenation\Example.cs" />
