@@ -96,6 +96,11 @@
     <Compile Include="Select Operation\EmployeeDto.cs" />
     <Compile Include="Select Operation\Repository.cs" />
     <Compile Include="Select Operation\SelectOperation.cs" />
+    <Compile Include="Sets Operations\Employee.cs" />
+    <Compile Include="Sets Operations\Example.cs" />
+    <Compile Include="Sets Operations\Extensions.cs" />
+    <Compile Include="Sets Operations\Meeting.cs" />
+    <Compile Include="Sets Operations\Repository.cs" />
     <Compile Include="Sorting\Custom_Comparer\CustomCoparer.cs" />
     <Compile Include="Sorting\Employee.cs" />
     <Compile Include="Sorting\Custom_Comparer\EmployeeComparer.cs" />

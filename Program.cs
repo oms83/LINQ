@@ -10,7 +10,7 @@ namespace LINQ
            
         static void Main(string[] args)
         {
-            Aggregate_Operations.Example.run();
+            Sets_Operations.Example.run();
 
             Console.ReadKey();
         }
