@@ -17,8 +17,19 @@ namespace LINQ.Aggregate_Operations
             //Example05();
             //Example06();
             //Example07();
-            Example08();
+            //Example08();
+            Example09();
 
+        }
+        private static void Example09()
+        {
+            var questions = Concatenation.QuestionBank.All;
+
+            var x = questions.SelectMany(q => q.Choices)
+                             .Where(c => c.Order == 1)
+                             .Average(c => c.Descirption.Length);
+
+            Console.WriteLine(x);
         }
         private static void Example08()
         {
