@@ -61,6 +61,7 @@
     <Compile Include="Equality Operations\Question.cs" />
     <Compile Include="Equality Operations\QuestionBank.cs" />
     <Compile Include="Examples\EmpsExample1.cs" />
+    <Compile Include="Expression Trees\Example.cs" />
     <Compile Include="Extension Method\clsExtensionProcedural3.cs" />
     <Compile Include="Extension Method\clsMain3.cs" />
     <Compile Include="Functional Programming\clsExtensionProcedural2.cs" />

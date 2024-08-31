@@ -10,7 +10,7 @@ namespace LINQ
            
         static void Main(string[] args)
         {
-            Sets_Operations.Example.run();
+            Expression_Trees.Example.run();
 
             Console.ReadKey();
         }
