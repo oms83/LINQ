@@ -11,9 +11,22 @@ namespace LINQ.Expression_Trees
     {
         public static void run()
         {
-            Example01();
+            //Example01();
+            Example02();
         }
 
+        private static void Example02()
+        {
+            Expression<Func<int, bool>> isNegativeExpression = (num) => num < 0;
+
+            ParameterExpression numParam = isNegativeExpression.Parameters[0];
+            BinaryExpression operation = (BinaryExpression)isNegativeExpression.Body;
+            ParameterExpression left = (ParameterExpression)operation.Left;
+            ConstantExpression right = (ConstantExpression)operation.Right;
+
+            //num => num LessThan 0
+            Console.WriteLine($"{numParam.Name} => {left.Name} {operation.NodeType} {right.Value}");
+        }
         private static void Example01()
         {
             Func<int, bool> IsEven = n => n % 2 == 0;
