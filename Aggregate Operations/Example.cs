@@ -13,7 +13,18 @@ namespace LINQ.Aggregate_Operations
             //Example01();
             //Example02();
             //Example03();
-            Example04();
+            //Example04();
+            Example05();
+        }
+
+        private static void Example05()
+        {
+            var questions = Concatenation.QuestionBank.All;
+
+            Console.WriteLine($"questions count: {questions.Count}");
+            Console.WriteLine($"questions count: {questions.Count()}");
+            Console.WriteLine($"questions count: {questions.Count(q => q.Title.Length > 40)}");
+            Console.WriteLine($"questions count: {questions.Where(q => q.Title.Length > 40).Count()}");
         }
 
         private static void Example04()
