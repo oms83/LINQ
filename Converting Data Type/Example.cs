@@ -13,9 +13,26 @@ namespace LINQ.Converting_Data_Type
             //Example01();
             //Example02();
             //Example03();
-            Example04();
+            //Example04();
+            Example05();
+            Example06();
         }
+        private static void Example06()
+        {
+            IEnumerable<Shipping> shippings = ShippingRepository.AllAsList;
 
+            var groundShipping = shippings.OfType<GroundShipping>();
+
+            groundShipping.Process("ground shippings (of type)");
+        }
+        private static void Example05()
+        {
+            IEnumerable<Shipping> shippings = ShippingRepository.AllAsList;
+
+            var groundShipping = shippings.Where(s=> s.GetType() == typeof(GroundShipping)).Cast<GroundShipping>();
+
+            groundShipping.Process("ground shippings (cast) ");
+        }
         private static void Example04()
         {
             ShippingList<Shipping> shippings = ShippingRepository.AllAsShippingList;
@@ -54,6 +71,28 @@ namespace LINQ.Converting_Data_Type
             var shippings = ShippingRepository.AllAsList;
             shippings.Process("All Shippings");
             //shippings.Process("All Shippings");
+        }
+    }
+
+    public static class Implementation
+    {
+        private static IEnumerable<T> ImplementOfOfType<T>(this IEnumerable<T> source)
+        {
+            foreach (var item in source)
+            {
+                // safe cast
+                if (item is T)
+                {
+                    yield return (T)item;
+                }
+            }
+        }
+        private static IEnumerable<T> ImplementOfCast<T>(this IEnumerable<T> source)
+        {
+            foreach (var item in source)
+            {
+                yield return (T)item;
+            }
         }
     }
 }
