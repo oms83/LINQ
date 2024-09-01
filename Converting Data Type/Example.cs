@@ -16,7 +16,16 @@ namespace LINQ.Converting_Data_Type
             //Example04();
             //Example05();
             //Example06();
-            Example07();
+            //Example07();
+            Example08();
+        }
+
+        private static void Example08()
+        {
+            // ToList
+            var shippings = ShippingRepository.AllAsList.ToList();
+            Console.WriteLine(shippings.Count);
+            shippings[0].Start();
         }
         private static void Example07()
         {
