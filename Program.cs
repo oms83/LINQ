@@ -10,7 +10,7 @@ namespace LINQ
            
         static void Main(string[] args)
         {
-            Expression_Trees.Example.run();
+            Converting_Data_Type.Example.run();
 
             Console.ReadKey();
         }

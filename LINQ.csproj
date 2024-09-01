@@ -49,6 +49,11 @@
     <Compile Include="Concatenation\Example.cs" />
     <Compile Include="Concatenation\Question.cs" />
     <Compile Include="Concatenation\QuestionBank.cs" />
+    <Compile Include="Converting Data Type\Example.cs" />
+    <Compile Include="Converting Data Type\Extension.cs" />
+    <Compile Include="Converting Data Type\Shipping.cs" />
+    <Compile Include="Converting Data Type\ShippingList.cs" />
+    <Compile Include="Converting Data Type\ShippingRepository.cs" />
     <Compile Include="Data Partitioning\Employee.cs" />
     <Compile Include="Data Partitioning\Pagination\Example.cs" />
     <Compile Include="Data Partitioning\Pagination\Extensions.cs" />
