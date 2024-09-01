@@ -19,9 +19,23 @@ namespace LINQ.Converting_Data_Type
             //Example07();
             //Example08();
             //Example09();
-            Example10();
+            //Example10();
+            Example11();
         }
+        private static void Example11()
+        {
+            ILookup<string, Shipping> shippings = ShippingRepository.AllAsList.ToLookup(s => s.UniqueID);
+            
+            //shippings["ABC001"].First().Start();
+            //shippings.().Process("");
 
+
+            foreach (var item in shippings)
+            {
+                Console.WriteLine(item.Key);
+                item.Process("");
+            }
+        }
         private static void Example10()
         {
             Dictionary<DateTime, List<Shipping>> shippings = ShippingRepository.AllAsList
