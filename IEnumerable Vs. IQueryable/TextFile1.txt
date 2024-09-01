@@ -1,0 +1,16 @@
+﻿
+
+IEnumerable:
+
+Primarily used for in-memory collection querying.
+Supports deferred execution, meaning queries are executed when iterated over.
+Suitable for querying data already loaded into memory.
+Does not support queryable methods like filtering or sorting at the database level.
+
+
+
+IQueryable:
+
+Designed for querying data from external data sources like databases.
+Supports deferred execution but translates queries to SQL or other query languages before execution.
+More efficient for querying large datasets as it offloads the work to the database.

@@ -116,6 +116,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="IEnumerable Vs. IQueryable\TextFile1.txt" />
     <Content Include="Linq Introduction\string.Format vs String interpolation.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
