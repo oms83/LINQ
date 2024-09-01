@@ -17,9 +17,51 @@ namespace LINQ.Converting_Data_Type
             //Example05();
             //Example06();
             //Example07();
-            Example08();
+            //Example08();
+            //Example09();
+            Example10();
         }
 
+        private static void Example10()
+        {
+            Dictionary<DateTime, List<Shipping>> shippings = ShippingRepository.AllAsList
+                                                                .GroupBy(s => s.ShippingDate)
+                                                                .ToDictionary(s => s.Key, s => s.ToList());
+            foreach (var item in shippings)
+            {
+                Console.WriteLine(item.Key.ToString("dddd, MMMM dd yyyy"));
+                item.Value.Process("");
+            }
+
+            Console.WriteLine("---------------------------");
+            
+            var shippingss = ShippingRepository.AllAsList.GroupBy(s => s.ShippingDate);
+
+            foreach (var item in shippingss)
+            {
+                Console.WriteLine(item.Key);
+                item.Process("ds");
+            }
+        }
+
+        private static void Example09()
+        {
+            // ToDictionary
+
+            //var shippings = ShippingRepository.AllAsList.ToDictionary(s=>s.UniqueID);
+            Dictionary<string, Shipping> shippings = ShippingRepository.AllAsList.ToDictionary(s=>s.UniqueID);
+
+
+            Console.WriteLine(shippings.Count);
+
+            shippings["ABC001"].Start();
+
+            foreach (var s in shippings)
+            {
+                Console.WriteLine(s.Key);
+                s.Value.Start();
+            }
+        }
         private static void Example08()
         {
             // ToList
