@@ -54,6 +54,10 @@
     <Compile Include="Converting Data Type\Shipping.cs" />
     <Compile Include="Converting Data Type\ShippingList.cs" />
     <Compile Include="Converting Data Type\ShippingRepository.cs" />
+    <Compile Include="Custom LINQ Extension Method\Employee.cs" />
+    <Compile Include="Custom LINQ Extension Method\Example.cs" />
+    <Compile Include="Custom LINQ Extension Method\Extensions.cs" />
+    <Compile Include="Custom LINQ Extension Method\Repository.cs" />
     <Compile Include="Data Partitioning\Employee.cs" />
     <Compile Include="Data Partitioning\Pagination\Example.cs" />
     <Compile Include="Data Partitioning\Pagination\Extensions.cs" />
