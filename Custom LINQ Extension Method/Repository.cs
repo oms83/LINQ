@@ -105,7 +105,7 @@ namespace LINQ.Custom_LINQ_Extension_Method
                     Department = "Software Engineer",
                     Salary = 24000m,
                     HireDate = new DateTime(2018, 4, 12),
-                    HasHealthInsurance = true,
+                    HasHealthInsurance = false,
                     HasPensionPlan = true,
                 },
                 new Employee()
@@ -117,7 +117,7 @@ namespace LINQ.Custom_LINQ_Extension_Method
                     Department = "Sales Manager",
                     Salary = 26000m,
                     HireDate = new DateTime(2017, 3, 25),
-                    HasHealthInsurance = true,
+                    HasHealthInsurance = false,
                     HasPensionPlan = false,
                 },
                 new Employee()
@@ -165,7 +165,7 @@ namespace LINQ.Custom_LINQ_Extension_Method
                     Department = "Software Engineer",
                     Salary = 28000m,
                     HireDate = new DateTime(2018, 6, 20),
-                    HasHealthInsurance = true,
+                    HasHealthInsurance = false,
                     HasPensionPlan = false,
                 },
                 new Employee()
@@ -177,7 +177,7 @@ namespace LINQ.Custom_LINQ_Extension_Method
                     Department = "Data Engineer",
                     Salary = 25000m,
                     HireDate = new DateTime(2017, 12, 3),
-                    HasHealthInsurance = true,
+                    HasHealthInsurance = false,
                     HasPensionPlan = true,
                 },
                 new Employee()
@@ -189,7 +189,7 @@ namespace LINQ.Custom_LINQ_Extension_Method
                     Department = "Content Writer",
                     Salary = 22000m,
                     HireDate = new DateTime(2020, 3, 22),
-                    HasHealthInsurance = true,
+                    HasHealthInsurance = false,
                     HasPensionPlan = false,
                 },
                 new Employee()
@@ -201,7 +201,7 @@ namespace LINQ.Custom_LINQ_Extension_Method
                     Department = "Software Engineer",
                     Salary = 24000m,
                     HireDate = new DateTime(2019, 8, 15),
-                    HasHealthInsurance = true,
+                    HasHealthInsurance = false,
                     HasPensionPlan = true,
                 },
                 new Employee()
@@ -225,7 +225,7 @@ namespace LINQ.Custom_LINQ_Extension_Method
                     Department = "Content Writer",
                     Salary = 24000m,
                     HireDate = new DateTime(2018, 10, 25),
-                    HasHealthInsurance = true,
+                    HasHealthInsurance = false,
                     HasPensionPlan = true,
                 },
                 new Employee()
@@ -249,7 +249,7 @@ namespace LINQ.Custom_LINQ_Extension_Method
                     Department = "Customer Support",
                     Salary = 24000m,
                     HireDate = new DateTime(2019, 6, 29),
-                    HasHealthInsurance = true,
+                    HasHealthInsurance = false,
                     HasPensionPlan = true,
                 },
                 new Employee()
@@ -273,7 +273,7 @@ namespace LINQ.Custom_LINQ_Extension_Method
                     Department = "Mobile Developer",
                     Salary = 27000m,
                     HireDate = new DateTime(2018, 1, 12),
-                    HasHealthInsurance = true,
+                    HasHealthInsurance = false,
                     HasPensionPlan = true,
                 },
                 new Employee()
@@ -285,7 +285,7 @@ namespace LINQ.Custom_LINQ_Extension_Method
                     Department = "Mobile Developer",
                     Salary = 25000m,
                     HireDate = new DateTime(2019, 4, 14),
-                    HasHealthInsurance = true,
+                    HasHealthInsurance = false,
                     HasPensionPlan = true,
                 },
                 new Employee()
@@ -297,7 +297,7 @@ namespace LINQ.Custom_LINQ_Extension_Method
                     Department = "Network Engineer",
                     Salary = 24000m,
                     HireDate = new DateTime(2020, 11, 6),
-                    HasHealthInsurance = true,
+                    HasHealthInsurance = false,
                     HasPensionPlan = true,
                 },
                 new Employee()
@@ -309,7 +309,7 @@ namespace LINQ.Custom_LINQ_Extension_Method
                     Department = "Network Engineer",
                     Salary = 24000m,
                     HireDate = new DateTime(2020, 11, 6),
-                    HasHealthInsurance = true,
+                    HasHealthInsurance = false,
                     HasPensionPlan = true,
                 },
                 new Employee()
@@ -333,7 +333,7 @@ namespace LINQ.Custom_LINQ_Extension_Method
                     Department = "Product Designer",
                     Salary = 27000m,
                     HireDate = new DateTime(2021, 1, 25),
-                    HasHealthInsurance = true,
+                    HasHealthInsurance = false,
                     HasPensionPlan = true,
                 },
                 new Employee()
@@ -345,7 +345,7 @@ namespace LINQ.Custom_LINQ_Extension_Method
                     Department = "Product Designer",
                     Salary = 30000m,
                     HireDate = new DateTime(2017, 7, 17),
-                    HasHealthInsurance = true,
+                    HasHealthInsurance = false,
                     HasPensionPlan = true,
                 },
                 new Employee()
@@ -357,7 +357,7 @@ namespace LINQ.Custom_LINQ_Extension_Method
                     Department = "HR Specialist",
                     Salary = 23000m,
                     HireDate = new DateTime(2019, 3, 4),
-                    HasHealthInsurance = true,
+                    HasHealthInsurance = false,
                     HasPensionPlan = false,
                 },
                 new Employee()
@@ -369,7 +369,7 @@ namespace LINQ.Custom_LINQ_Extension_Method
                     Department = "Software Architect",
                     Salary = 32000m,
                     HireDate = new DateTime(2016, 10, 22),
-                    HasHealthInsurance = true,
+                    HasHealthInsurance = false,
                     HasPensionPlan = true,
                 },
                 new Employee()
@@ -381,7 +381,7 @@ namespace LINQ.Custom_LINQ_Extension_Method
                     Department = "Product Designer",
                     Salary = 28000m,
                     HireDate = new DateTime(2020, 9, 1),
-                    HasHealthInsurance = true,
+                    HasHealthInsurance = false,
                     HasPensionPlan = true,
                 },
             };

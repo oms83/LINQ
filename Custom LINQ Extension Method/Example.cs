@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LINQ.Extension_Method;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,9 +12,16 @@ namespace LINQ.Custom_LINQ_Extension_Method
         public static void run()
         {
             //Example01();
-            Example02();
+            //Example02();
+            Example03();
         }
+        public static void Example03()
+        {
+            var employees = Repository.GetEmployeesInfo();
 
+            employees.WhereWithPaginate(emp => emp.HasHealthInsurance, 1, 7).Print("");
+
+        }
         public static void Example02()
         {
             var employees = Repository.GetEmployeesInfo();

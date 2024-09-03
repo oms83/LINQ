@@ -69,5 +69,29 @@ namespace LINQ.Custom_LINQ_Extension_Method
 
             return source.Skip((page.Value - 1) * pageSize.Value).Take(pageSize.Value);
         }
+
+        public static IEnumerable<TSource> WhereWithPaginate<TSource>(this IEnumerable<TSource> source,
+            Func<TSource, bool> predicate,
+            int? page, int? pageSize)
+        {
+            if (source is null)
+            {
+                throw new ArgumentNullException($"{nameof(source)}");
+            }
+
+            if (predicate == null)
+            {
+                throw new ArgumentException($"{nameof(predicate)}");
+            }
+
+            if (!source.Any())
+            {
+                return Enumerable.Empty<TSource>();
+            }
+
+            var result = Enumerable.Where(source, predicate);
+
+            return Paginate(result, page, pageSize);
+        }
     }
 }
