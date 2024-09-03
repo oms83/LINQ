@@ -89,6 +89,9 @@
     <Compile Include="Join Operation\Example.cs" />
     <Compile Include="Join Operation\Group.cs" />
     <Compile Include="Join Operation\Repository.cs" />
+    <Compile Include="LINQ Anatomy\Card.cs" />
+    <Compile Include="LINQ Anatomy\Deck.cs" />
+    <Compile Include="LINQ Anatomy\Examples.cs" />
     <Compile Include="Procedural\clsMain1.cs" />
     <Compile Include="Functional Programming\clsMain2.cs" />
     <Compile Include="clsRepository.cs" />

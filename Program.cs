@@ -10,7 +10,7 @@ namespace LINQ
            
         static void Main(string[] args)
         {
-            Custom_LINQ_Extension_Method.Example.run();
+            LINQ_Anatomy.Examples.run();
 
             Console.ReadKey();
         }
