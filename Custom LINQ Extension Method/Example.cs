@@ -10,9 +10,20 @@ namespace LINQ.Custom_LINQ_Extension_Method
     {
         public static void run()
         {
-            Example01();
+            //Example01();
+            Example02();
         }
 
+        public static void Example02()
+        {
+            var employees = Repository.GetEmployeesInfo();
+
+            employees.Paginate().Print("Page #1");
+            employees.Paginate(null, 7).Print("Page #1");
+            employees.Paginate(2, null).Print("Page #1");
+            employees.Paginate(null, null).Print("Page #1");
+
+        }
         public static void Example01()
         {
             var employees = Repository.GetEmployeesInfo();

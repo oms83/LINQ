@@ -43,6 +43,31 @@ namespace LINQ.Custom_LINQ_Extension_Method
             }
 
             return source.Skip((page - 1) * pageSize).Take(pageSize);
-        }   
+        }
+
+        public static IEnumerable<TSource> Paginate<TSource>(this IEnumerable<TSource> source, int? page, int? pageSize)
+        {
+            if (source is null)
+            {
+                throw new ArgumentNullException($"{nameof(source)}");
+            }
+
+            if (!page.HasValue)
+            {
+                page = 1; 
+            }
+
+            if (!pageSize.HasValue)
+            {
+                page = 10; 
+            }
+
+            if (!source.Any())
+            {
+                return Enumerable.Empty<TSource>();
+            }
+
+            return source.Skip((page.Value - 1) * pageSize.Value).Take(pageSize.Value);
+        }
     }
 }
