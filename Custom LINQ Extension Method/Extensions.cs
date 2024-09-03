@@ -8,6 +8,7 @@ namespace LINQ.Custom_LINQ_Extension_Method
 {
     public static class Extensions
     {
+        private static Random _random = new Random();
         public static void Print(this IEnumerable<Employee> employees, string Message)
         {
             Console.WriteLine($"\n\t\t\t\t\t\t\t{Message}\n");
@@ -92,6 +93,31 @@ namespace LINQ.Custom_LINQ_Extension_Method
             var result = Enumerable.Where(source, predicate);
 
             return Paginate(result, page, pageSize);
+        }
+
+        public static TSource Random<TSource>(this IEnumerable<TSource> source,
+            Func<TSource, bool> predicate,
+            int? page, int? pageSize)
+        {
+            if (source == null)
+            {
+                throw new ArgumentException($"{nameof(source)}");
+            }
+
+            if (predicate == null)
+            {
+                throw new ArgumentException($"{nameof(predicate)}");
+            }
+
+            if (!source.Any())
+            {
+                // Tsource: Because it is not clear what will be returned
+                return default;
+            }
+
+            var result = Enumerable.Where(source, predicate);
+
+            return result.ElementAt(_random.Next(0, result.Count()));
         }
     }
 }

@@ -13,7 +13,15 @@ namespace LINQ.Custom_LINQ_Extension_Method
         {
             //Example01();
             //Example02();
-            Example03();
+            //Example03();
+            Example04();
+        }
+        public static void Example04()
+        {
+            var employees = Repository.GetEmployeesInfo();
+
+            Console.WriteLine(employees.Random(emp => emp.HasHealthInsurance, 1, 7)); ;
+
         }
         public static void Example03()
         {
