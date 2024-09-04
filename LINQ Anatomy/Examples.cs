@@ -22,7 +22,24 @@ namespace LINQ.LINQ_Anatomy
             //DemoDefferedStreamedExecution();
             //DemoDefferedNotStreamedExecution();
             //DemoTake();
-            DemoFilterOrder();
+            //DemoFilterOrder();
+            RunQuery();
+
+        }
+        private static void RunQuery()
+        {
+            var deck = new Deck();
+
+            var cards = deck.GetSample();
+
+            var query = cards      // { Jack Clubs, 9 Diamonds, 4 Hearts, 10 Spades, 3 Hearts, 6 Hearts }
+            .Where(x => x.IsRed)   // {             9 Diamonds, 4 Hearts,            3 Hearts, 6 Hearts }
+            .Skip(1)               // {                       , 4 Hearts,            3 Hearts, 6 Hearts }
+            .OrderBy(x => x.Value) // {                       , 3 Hearts,            4 Hearts, 6 Hearts }
+            .Take(2)
+            .ToList(); // { 3 Hearts, 4 Hearts }
+
+            query.PrintDeck("Order Buffer Sequence, when it's enumerated");
 
         }
         private static void DemoFilterOrder()
