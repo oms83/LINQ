@@ -1,6 +1,7 @@
 ﻿using LINQ.Extension_Method;
 using LINQ.Sets_Operations;
 using System;
+using System.CodeDom.Compiler;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,48 @@ namespace LINQ.LINQ_Anatomy
             //DemoIEnumerableIQueryable();
             //DemoExecutionOrder();
             //DemoImmedaiteExecution();
-            DemoDefferedExecution();
+            //DemoDefferedExecution();
+            DemoDefferedStreamedExecution();
+        }
+
+        private static void DemoDefferedStreamedExecution()
+        {
+            // Deferred Execution(Streaming):
+            // at the time of execution they do not read all source data
+            // before the yield element
+            // Where is not required to find all matching items before fetching the first matching items 
+            // Where fetches matching items "on demand"
+
+            var numbers = new int[] { 8, 2, 3, 4, 1, 6, 5, 12, 9 };
+
+            var query = numbers.Where(x =>
+            {
+                Console.WriteLine($"Where({x} > 5) => {x > 5}");
+                return x > 5;
+            }).
+            Select(x =>
+            {
+                Console.WriteLine($"\tSelect({x} X {x}) => {x * x}");
+                return x * x;
+            }).
+            Where(x =>
+            {
+                var result = x % 6 == 0;
+                Console.WriteLine($"\t\tWhere({x} % 6) == 0 => {result}");
+                if (result)
+                {
+                    Console.WriteLine($"\t\t\tTake: {x}");
+                }
+
+                return x % 6 == 0;
+            }).
+            Take(2);
+
+            foreach (var item in query)
+            {
+                Console.WriteLine(query);
+            }
+
         }
 
         private static void DemoDefferedExecution()
