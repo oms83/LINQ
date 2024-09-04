@@ -20,6 +20,37 @@ namespace LINQ.LINQ_Anatomy
             //DemoImmedaiteExecution();
             //DemoDefferedExecution();
             DemoDefferedStreamedExecution();
+            DemoDefferedNotStreamedExecution();
+        }
+
+        private static void DemoDefferedNotStreamedExecution()
+        {
+            //  Deferred Execution(Streaming) :
+            //  at the time of execution they do not read all source data
+            //  before the yield element
+            // Where is not required to find all matching items before fetching the first matching item. 
+            // Where fetches matching items "on demand"
+
+
+            var numbers = new int[] { 8, 2, 3, 4, 1, 6, 5, 12, 9 };
+
+            var query = numbers.Where(x =>
+            {
+                Console.WriteLine($"Where({x} > 5) => {x > 5}");
+                return x > 5;
+            }).
+            OrderBy(x => x). // not streamed operation => first get all nums greate than 5
+            Select(x =>
+            {
+                Console.WriteLine($"\tSelect({x} X {x}) => {x * x}");
+                return x * x;
+            }).
+            Take(2);
+
+            foreach (var item in query)
+            {
+                Console.WriteLine(query);
+            }
         }
 
         private static void DemoDefferedStreamedExecution()
