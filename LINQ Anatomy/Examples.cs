@@ -21,7 +21,36 @@ namespace LINQ.LINQ_Anatomy
             //DemoDefferedExecution();
             //DemoDefferedStreamedExecution();
             //DemoDefferedNotStreamedExecution();
-            DemoTake();
+            //DemoTake();
+            DemoFilterOrder();
+
+        }
+        private static void DemoFilterOrder()
+        {
+            // Filter / Order (Top 10 in the Red Cards) 
+
+            var deck = new Deck();
+
+            var cards = deck.Shuffle();
+
+            var query1 = cards
+            .Where(x => x.IsRed)
+            .OrderBy(x => x.Value)
+            .Take(10);
+
+            query1.PrintDeck("top 10 red cards");
+
+            //  Order / Filter   (red cards in the top 10)
+
+            var query2 = cards
+            .OrderBy(x => x.Value)
+            .Take(10)
+            .Where(x => x.IsRed);
+
+
+
+            query2.PrintDeck("Red Cards in the top 10");
+
         }
         private static void DemoTake()
         {
