@@ -19,10 +19,34 @@ namespace LINQ.LINQ_Anatomy
             //DemoExecutionOrder();
             //DemoImmedaiteExecution();
             //DemoDefferedExecution();
-            DemoDefferedStreamedExecution();
-            DemoDefferedNotStreamedExecution();
+            //DemoDefferedStreamedExecution();
+            //DemoDefferedNotStreamedExecution();
+            DemoTake();
         }
+        private static void DemoTake()
+        {
+            // Take clause just appends a Take operation to the query;
+            // it does not execute the query
+            // You must put the Take operation where it needs to be. Remember, 
+            // x.Take(y).Where(z) and x.Where(z).Take(y) are very different queries.
+            // changing the take location change the meaning of the query
+            // put it in the right place as early as possible,
+            // but not so early that it changes the meaning of the query
 
+            var deck = new Deck();
+
+            var cards = deck.GetSample();
+
+            var query = cards     // { Jack Clubs, 9 Diamonds, 4 Hearts, 10 Spades, 3 Hearts, 6 Hearts }
+            .Where(x => x.IsRed)  // {             9 Diamonds, 4 Hearts,            3 Hearts, 6 Hearts }
+            .Skip(3)              // {                                                        6 Hearts }  
+            .Take(3);             // {                                                        6 Hearts }
+
+            var list = query.ToList(); // { 6 Hearts }
+
+            list.PrintDeck("Take more than available");
+
+        }
         private static void DemoDefferedNotStreamedExecution()
         {
             //  Deferred Execution(Streaming) :

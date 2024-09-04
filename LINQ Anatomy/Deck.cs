@@ -20,7 +20,7 @@ namespace LINQ.LINQ_Anatomy
             }
         }
 
-        public static IEnumerable<Card> GetSample()
+        public IEnumerable<Card> GetSample()
         {
             yield return FillDeck().Single(x => x.Value == 11 && x.Suite == Card.Suites.HEARTS);
             yield return FillDeck().Single(x => x.Value == 9 && x.Suite == Card.Suites.DIAMONDS);
