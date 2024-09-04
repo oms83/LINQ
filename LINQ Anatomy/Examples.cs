@@ -1,5 +1,7 @@
 ﻿using LINQ.Extension_Method;
+using LINQ.Sets_Operations;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,7 +16,29 @@ namespace LINQ.LINQ_Anatomy
             //DemoFluentAPI();
             //DemoIEnumerableIQueryable();
             //DemoExecutionOrder();
-            DemoImmedaiteExecution();
+            //DemoImmedaiteExecution();
+            DemoDefferedExecution();
+        }
+
+        private static void DemoDefferedExecution()
+        {
+            // Not executed when constructed, only when it's enumerated
+            // Setting up a data structure that describes the query
+            // queries are always up - to - date.
+            // queries is more expensive that list to retrieve result
+            // queries are tiny
+
+
+            var numbers = new int[] { 8, 2, 3, 4, 1, 6, 5, 12, 9 };
+            var query = numbers
+                       .Where(x => x > 5)
+                       .Select(x => x * x)
+                       .Take(2);
+
+            foreach (var item in query)
+            {
+                Console.WriteLine(item);
+            }
         }
 
         private static void DemoImmedaiteExecution()
