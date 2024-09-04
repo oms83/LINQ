@@ -13,7 +13,30 @@ namespace LINQ.LINQ_Anatomy
         {
             //DemoFluentAPI();
             //DemoIEnumerableIQueryable();
-            DemoExecutionOrder();
+            //DemoExecutionOrder();
+            DemoImmedaiteExecution();
+        }
+
+        private static void DemoImmedaiteExecution()
+        {
+            // Immediate: the data is read and the operation is performed
+            // at the point in the code where the query is declared.
+
+            // not up to data
+            // not expensive to call
+            // list are big
+
+            var numbers = new int[] { 8, 2, 3, 4, 1, 6, 5, 12, 9 };
+            var list = numbers
+                       .Where(x => x > 5)
+                       .Take(2)
+                       .ToList();
+
+            foreach (var item in list)
+            {
+                Console.WriteLine(item);
+            }
+
         }
 
         private static void DemoExecutionOrder()
