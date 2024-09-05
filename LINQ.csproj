@@ -65,6 +65,7 @@
     <Compile Include="Data Partitioning\Skip Operation\clsSkip.cs" />
     <Compile Include="Data Partitioning\Take Operation\clsTake.cs" />
     <Compile Include="Deffered vs Immediate\Example.cs" />
+    <Compile Include="Deffered vs Immediate\Example2.cs" />
     <Compile Include="Equality Operations\Choice.cs" />
     <Compile Include="Equality Operations\Example.cs" />
     <Compile Include="Equality Operations\Question.cs" />
